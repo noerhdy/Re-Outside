@@ -31,9 +31,9 @@ function MarqueeSection() {
   ];
 
   return (
-    <div className="max-w-[300px] z-10 bg-[#fefefe] py-2 font-semibold appearance-none  overflow-hidden h-full rounded-bl-2xl  relative  pt-4 ">
-      <div className="">
-        <h1 className="absolute top-0 z-10 px-2 text-[1rem]  bg-[#fefefe] rounded-br-xl ">
+    <>
+      <div className=" py-1 font-semibold appearance-none  overflow-hidden  ">
+        <h1 className="text-[1rem] px-6 font-medium text-zinc-100">
           We confess
         </h1>
         <Marquee pauseOnClick={false} autoFill speed={50}>
@@ -47,7 +47,7 @@ function MarqueeSection() {
           ))}
         </Marquee>
       </div>
-    </div>
+    </>
   );
 }
 
