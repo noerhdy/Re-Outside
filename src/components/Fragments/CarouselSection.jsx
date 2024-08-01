@@ -7,7 +7,7 @@ import "swiper/css/scrollbar";
 
 const CarouselSection = () => {
   return (
-    <div className="max-w-full h-fit flex justify-center  items-center overflow-hidden rounded-xl">
+    <div className="max-w-full h-fit flex justify-center  items-center overflow-hidden rounded-2xl">
       <Swiper
         modules={[Scrollbar, A11y, Autoplay]}
         slidesPerView={1}

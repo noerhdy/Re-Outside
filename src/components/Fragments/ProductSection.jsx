@@ -1,21 +1,26 @@
 import React from "react";
 import { productData } from "../../constants";
+import ButtonCta from "../Elements/ButtonCta";
 
 function ProductSection() {
   return (
-    <>
-      <div className="bg-zinc-100 flex flex-col mx-8 items-center justify-center">
-        <div className="flex flex-col items-start w-full font-bold text-7xl  ">
+    <div className="flex justify-center items-center w-full">
+      <div className="flex flex-col justify-center space-y-2">
+        <div className="flex flex-col items-start font-bold text-7xl">
           <h1>Our</h1>
           <h1>Oat</h1>
           <h1>Milk</h1>
         </div>
-        <div className="">
-          <div className="my-2 bg-yellow-300 flex items-center justify-center  py-2 px-4 hover:border-b-8 rounded-full border-zinc-950 border-2  ">
-            <h2 className="text-xl font-semibold ">Shop Now</h2>
-          </div>
+        <div>
+          <ButtonCta
+            classname="justify-center items-center px-10 py-4 bg-yellow-400 hover:bg-black text-black hover:text-white font-semibold text-xl relative overflow-hidden rounded-xl border-4 border-black  shadow-[4px_4px_0px_#000] hover:shadow-[0px_0px_0px_#000]"
+            link="https://linktr.ee/oatsideminiid"
+          >
+            Shop Now
+          </ButtonCta>
         </div>
       </div>
+
       <div className="flex justify-center items-center gap-8 ">
         {productData.map((item, index) => (
           <div className=" group z-10 relative " key={index}>
@@ -32,7 +37,7 @@ function ProductSection() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
