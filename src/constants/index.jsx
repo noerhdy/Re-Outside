@@ -1,7 +1,7 @@
 export const productData = [
   {
     id: 1,
-    title: "Coffee",
+    title: "Oat Latte",
     image: "/img/Coffee.webp",
   },
   {
@@ -11,7 +11,7 @@ export const productData = [
   },
   {
     id: 3,
-    title: "Coklat",
+    title: "Chocolate",
     image: "/img/Choc.webp",
   },
 ];
