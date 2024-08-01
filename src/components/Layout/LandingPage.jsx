@@ -62,18 +62,9 @@ function LandingPage() {
           </div>
         </div>
 
-        <div className="col-span-1">
-          <div className="rounded-2xl bg-zinc-800 border-zinc-950 border-4 px-2 flex flex-col justify-evenly items-center h-full">
-            {/* Carousel Section */}
-            <CarouselSection />
-            <div className=" w-full  h-20 flex items-center justify-center rounded-xl">
-              <ButtonCta classname="justify-center w-full mx-1 py-4 items-center bg-zinc-50 hover:bg-black text-zinc-800 hover:text-zinc-50 font-semibold text-xl relative overflow-hidden rounded-xl border-4 border-black  shadow-[4px_4px_0px_#000] hover:shadow-[0px_0px_0px_#000]">
-                Join Comunity
-              </ButtonCta>
-            </div>
-          </div>
-
-          {/* Informasi Section */}
+        <div className="grid grid-cols-1 border-4 rounded-2xl border-zinc-950 overflow-hidden">
+          {/* Carousel Section */}
+          <CarouselSection />
         </div>
       </div>
     </section>
