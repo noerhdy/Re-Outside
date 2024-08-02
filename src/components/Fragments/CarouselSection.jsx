@@ -38,7 +38,7 @@ const CarouselSection = () => {
           ))}
         </Swiper>
         <div className="absolute bottom-5 w-full z-[2] flex items-center justify-center rounded-xl">
-          <div className="justify-center flex w-full items-center bg-gray-950/30 text-zinc-50 font-semibold text-[1rem] py-1 rounded-xl border-2 border-zinc-50 mx-2">
+          <div className="justify-center flex w-full items-center bg-gray-800/70 text-[#43b8cd] font-semibold text-[1rem] py-1 rounded-xl border-2 border-zinc-600 mx-2">
             Join Community
           </div>
         </div>

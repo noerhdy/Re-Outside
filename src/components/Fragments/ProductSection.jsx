@@ -13,7 +13,7 @@ function ProductSection() {
         </div>
         <div>
           <ButtonCta
-            classname="justify-center items-center px-10 py-4 bg-yellow-400 hover:bg-black text-black hover:text-white font-semibold text-xl relative overflow-hidden rounded-xl border-4 border-black  shadow-[4px_4px_0px_#000] hover:shadow-[0px_0px_0px_#000]"
+            classname="justify-center items-center px-10 py-4 bg-zinc-800 hover:bg-zinc-900 text-[#43b8cd] hover:text-white font-semibold text-xl relative overflow-hidden rounded-xl border-4 border-black  shadow-[4px_4px_0px_#000] hover:shadow-[0px_0px_0px_#000]"
             link="https://linktr.ee/oatsideminiid"
           >
             Shop Now
