@@ -23,7 +23,7 @@ function ProductSection() {
         {productData.map((item, index) => (
           <div className="group relative max-w-[180px]" key={index}>
             <div className="flex flex-col items-center transform transition-transform duration-700 ease-in-out sm:translate-y-[180px] translate-y-24 group-hover:translate-y-0">
-              <h2 className="font-semibold text-[1rem] text-zinc-950 transition-transform duration-500 ease-in-out group-hover:translate-y-5">
+              <h2 className="font-semibold text-[0.675rem] sm:text-[1rem] text-zinc-950 transition-transform duration-500 ease-in-out group-hover:translate-y-5">
                 {item.title}
               </h2>
               <img
