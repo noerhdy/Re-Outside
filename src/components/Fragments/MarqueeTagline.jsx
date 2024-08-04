@@ -9,7 +9,7 @@ function MarqueeTagline() {
 
   return (
     <Marquee pauseOnClick={false} autoFill speed={50}>
-      <div className="flex items-center font-semibold my-4 py-2 bg-neutral-800">
+      <div className="flex items-center font-normal my-2 py-2 bg-neutral-950">
         <div className="text-container ">
           <span className="text-[0.875rem] tracking-widest text-white">
             {text1}

@@ -15,9 +15,7 @@ const images = [
 const CarouselSection = () => {
   return (
     <>
-      <div className="group flex justify-center flex-col relative items-center overflow-hidden ">
-        <div className="w-full h-full bg-black opacity-50 sm:opacity-0 group-hover:opacity-0 ease-in-out duration-500 absolute z-10"></div>
-
+      <div className="flex justify-center flex-col relative items-center overflow-hidden ">
         <Swiper
           modules={[Scrollbar, A11y, Autoplay]}
           slidesPerView={1}
@@ -29,9 +27,9 @@ const CarouselSection = () => {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full overflow-hidden rounded-xl ">
+              <div className="relative w-full h-full overflow-hidden ">
                 <img
-                  className="w-full h-full aspect-square object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
+                  className="w-full h-full aspect-square object-cover "
                   src={image.src}
                   alt={image.alt}
                 />
@@ -40,7 +38,7 @@ const CarouselSection = () => {
           ))}
         </Swiper>
         <div className="absolute  bottom-0 w-full  z-[20] flex items-center justify-center sm:rounded-none rounded-xl">
-          <div className="justify-center flex w-full py-4 items-center bg-neutral-800/60 text-[#FEDF6F] font-semibold text-[1rem] ">
+          <div className="justify-center flex w-full py-4 items-center bg-neutral-800/70 text-white font-semibold text-[1rem] ">
             Join Community
           </div>
         </div>

@@ -34,7 +34,7 @@ function HeadSection() {
   );
 
   return (
-    <div className="relative font-extrabold md:text-9xl text-8xl flex w-full justify-center items-center z-10">
+    <div className="relative font-extrabold md:text-9xl text-8xl flex w-full justify-center items-center sm:pt-0 pt-4 z-10">
       <div
         className="inline-flex items-center justify-center relative group cursor-default"
         onMouseEnter={() => setHovered(true)}
