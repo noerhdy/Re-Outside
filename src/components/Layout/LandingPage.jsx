@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CarouselSection from "../Fragments/CarouselSection";
 import HeadSection from "../Fragments/HeadSection";
 import MiddleSection from "../Fragments/MiddleSection";
 import ProductSection from "../Fragments/ProductSection";
 import ButtonCta from "../Elements/ButtonCta";
 import { motion } from "framer-motion";
+import MarqueeTagline from "../Fragments/MarqueeTagline";
 
 function LandingPage() {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+
   const wordsLink = [
     { text: "Dear cows" },
     { text: "FAQ" },
     { text: "Contact us" },
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <section className="overflow-hidden sm:h-svh h-auto ">
+    <section className="overflow-hidden sm:h-svh h-auto">
       <HeadSection />
       <motion.div
         className="z-10 relative"
@@ -80,6 +94,7 @@ function LandingPage() {
           </div>
         </div>
       </motion.div>
+      {isDesktop && <MarqueeTagline />}
     </section>
   );
 }
