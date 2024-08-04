@@ -37,7 +37,9 @@ function MiddleSection() {
   return (
     <div className="max-w-screen-xl py-2 pl-2  rounded-bl-xl  ">
       <div className="font-medium px-2 flex justify-center items-center">
-        <span className="text-[1rem] mr-1 text-black">Free from </span>
+        <span className="text-[1rem] mr-1 text-[#f7f6f5] sm:text-[#4f443f]">
+          Free from{" "}
+        </span>
         <div className="relative flex items-center justify-center w-fit px-4 py-1">
           <div
             className={`absolute inset-0 rounded-md transition-colors duration-500 ease-in-out ${words[currentWordIndex].bgColor}`}

@@ -5,7 +5,7 @@ import "../index.css";
 function HomePage() {
   return (
     <>
-      <section className="bg-[#E9E6E1]  relative px-2 mx-auto max-w-screen-xl sm:py-4 lg:px-6">
+      <section className="bg-[#E9E6E1]  relative  max-w-screen-2xl  ">
         {/* <LoadingSection /> */}
         <LandingPage />
       </section>

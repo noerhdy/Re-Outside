@@ -34,7 +34,7 @@ function HeadSection() {
   );
 
   return (
-    <div className="relative font-extrabold text-9xl flex w-full justify-center items-center z-10">
+    <div className="relative font-extrabold md:text-9xl text-5xl flex w-full justify-center items-center z-10">
       <div
         className="inline-flex items-center justify-center relative group cursor-default"
         onMouseEnter={() => setHovered(true)}
@@ -89,7 +89,7 @@ function HeadSection() {
             style={{ zIndex: hovered ? -1 : 1 }} // Ubah z-index berdasarkan status hover
           >
             <img
-              className="w-20 object-cover bg-cover transition-transform duration-500"
+              className="md:w-20  w-10 object-cover bg-cover transition-transform duration-500"
               src={src}
               alt={`sticker${index + 1}`}
             />
