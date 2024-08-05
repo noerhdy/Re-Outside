@@ -29,7 +29,7 @@ function LandingPage() {
 
   return (
     <section className="overflow-hidden sm:h-screen h-auto">
-      <HeadSection disableAnimation={false} />
+      <HeadSection />
       <motion.div
         className="z-10 relative"
         initial={{ y: 500, opacity: 0 }}

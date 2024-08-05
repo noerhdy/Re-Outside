@@ -37,44 +37,32 @@ function HeadSection({ disableAnimation }) {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        {!disableAnimation ? (
-          <>
-            <motion.div
-              initial={{ x: -1000, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 3, delay: 2 }}
-            >
-              <div className="inline-flex">
-                <span>O</span>
-                <span>A</span>
-                <span>T</span>
-              </div>
-            </motion.div>
+        <>
+          <motion.div
+            initial={{ x: -1000, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 3, delay: 2 }}
+          >
+            <div className="inline-flex">
+              <span>O</span>
+              <span>A</span>
+              <span>T</span>
+            </div>
+          </motion.div>
 
-            <motion.div
-              initial={{ x: 1000, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 3, delay: 2 }}
-            >
-              <div className="inline-flex">
-                <span>S</span>
-                <span>I</span>
-                <span>D</span>
-                <span>E</span>
-              </div>
-            </motion.div>
-          </>
-        ) : (
-          <div className="inline-flex">
-            <span>O</span>
-            <span>A</span>
-            <span>T</span>
-            <span>S</span>
-            <span>I</span>
-            <span>D</span>
-            <span>E</span>
-          </div>
-        )}
+          <motion.div
+            initial={{ x: 1000, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 3, delay: 2 }}
+          >
+            <div className="inline-flex">
+              <span>S</span>
+              <span>I</span>
+              <span>D</span>
+              <span>E</span>
+            </div>
+          </motion.div>
+        </>
 
         {stickers.map((src, index) => (
           <motion.div

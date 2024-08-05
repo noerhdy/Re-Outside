@@ -34,3 +34,12 @@
   height: var(--swiper-scrollbar-size, 4px);
   width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
 }
+
+.scroll-container {
+  height: 100vh; /* Atur tinggi sesuai kebutuhan */
+  overflow-y: auto; /* Tambahkan scroll vertikal */
+}
+
+.card-wrapper {
+  transition: transform 0.3s ease-out; /* Transisi efek scroll yang halus */
+}
