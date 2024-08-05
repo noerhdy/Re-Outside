@@ -1,5 +1,5 @@
 import React from "react";
-import { Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
+import { Scrollbar, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,7 +12,7 @@ const images = [
   { src: "carousel/3.jpg", alt: "Slide 4" },
 ];
 
-const CarouselSection = () => {
+const GridSwipe = () => {
   return (
     <>
       <div className="flex justify-center flex-col relative items-center overflow-hidden rounded-2xl">
@@ -48,4 +48,4 @@ const CarouselSection = () => {
   );
 };
 
-export default CarouselSection;
+export default GridSwipe;

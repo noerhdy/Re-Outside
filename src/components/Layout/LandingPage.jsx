@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import CarouselSection from "../Fragments/CarouselSection";
 import HeadSection from "../Fragments/HeadSection";
 import MiddleSection from "../Fragments/MiddleSection";
-import ButtonCta from "../Elements/ButtonCta";
 import { motion } from "framer-motion";
 import MarqueeTagline from "../Fragments/MarqueeTagline";
 import GridProduct from "../Fragments/GridProduct";
+import GridSwipe from "../Fragments/GridSwipe";
+import GridInfo from "../Fragments/GridInfo";
 
 function LandingPage() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth < 768);
@@ -20,12 +20,6 @@ function LandingPage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const wordsLink = [
-    { text: "Dear cows" },
-    { text: "FAQ" },
-    { text: "Contact us" },
-  ];
 
   return (
     <section className="overflow-hidden sm:h-screen h-auto">
@@ -79,26 +73,14 @@ function LandingPage() {
 
               {/* Grid (Kiri 3) - Info */}
               <div className="col-span-3 sm:col-span-2 p-4 h-40 bg-neutral-900 flex items-center justify-center rounded-2xl">
-                <div className="flex flex-col items-start gap-1 w-full">
-                  <h1 className="font-semibold text-[1rem] text-[#f7f6f5]">
-                    Info
-                  </h1>
-                  {wordsLink.map((word, index) => (
-                    <ButtonCta
-                      key={index}
-                      classname="justify-start w-full pl-2 py-2 items-center bg-neutral-800 text-[#a99b8e] hover:text-zinc-50 font-semibold text-[0.75rem] relative overflow-hidden rounded-md"
-                    >
-                      {word.text}
-                    </ButtonCta>
-                  ))}
-                </div>
+                <GridInfo />
               </div>
             </div>
           </div>
 
           {/* Grid (Kanan) Swipe Ig Highlights */}
           <div className="grid col-span-1 rounded-2xl overflow-hidden sm:pb-0 pb-4">
-            <CarouselSection />
+            <GridSwipe />
           </div>
         </div>
       </motion.div>

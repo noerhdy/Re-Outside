@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { productData } from "../../constants";
-import ButtonCta from "../Elements/ButtonCta";
 import ModalProduct from "./ModalProduct";
+import ButtonCta from "../Elements/Button/ButtonCta";
 
 function GridProduct() {
   const [isModalVisible, setIsModalVisible] = useState(false);

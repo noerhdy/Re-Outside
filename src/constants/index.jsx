@@ -55,3 +55,9 @@ export const wordsMarquee = [
     textColor: "text-[#582614] ",
   },
 ];
+
+export const wordsLink = [
+  { textTitle: "Dear cows" },
+  { textTitle: "FAQ" },
+  { textTitle: "Contact us" },
+];
