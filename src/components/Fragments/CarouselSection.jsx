@@ -15,7 +15,7 @@ const images = [
 const CarouselSection = () => {
   return (
     <>
-      <div className="flex justify-center flex-col relative items-center overflow-hidden ">
+      <div className="flex justify-center flex-col relative items-center overflow-hidden rounded-2xl">
         <Swiper
           modules={[Scrollbar, A11y, Autoplay]}
           slidesPerView={1}
@@ -38,8 +38,9 @@ const CarouselSection = () => {
           ))}
         </Swiper>
         <div className="absolute  bottom-0 w-full  z-[20] flex items-center justify-center sm:rounded-none rounded-xl">
-          <div className="justify-center flex w-full py-4 items-center bg-neutral-800/70 text-white font-semibold text-[1rem] ">
-            Join Community
+          <div className="justify-center flex flex-col w-full py-4 items-center bg-neutral-800/70 text-white font-semibold text-[1rem] ">
+            <h1>Join Community</h1>
+            <h1>@Oatside</h1>
           </div>
         </div>
       </div>

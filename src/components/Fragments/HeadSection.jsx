@@ -1,30 +1,27 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
 
-function HeadSection() {
+function HeadSection({ disableAnimation }) {
   const [hovered, setHovered] = useState(false);
   const [positions, setPositions] = useState(
     Array.from({ length: 25 }, () => ({ x: 0, y: 0 }))
   );
 
-  // Fungsi untuk mendapatkan posisi acak dengan jangkauan lebih luas
   const getRandomPosition = (maxX, maxY) => ({
-    x: Math.random() * maxX - maxX / 2, // Nilai acak antara -maxX/2 dan maxX/2
-    y: Math.random() * maxY - maxY / 2, // Nilai acak antara -maxY/2 dan maxY/2
+    x: Math.random() * maxX - maxX / 2,
+    y: Math.random() * maxY - maxY / 2,
   });
 
   useEffect(() => {
-    // Update posisi sticker saat hover berubah
     setPositions(Array.from({ length: 25 }, () => getRandomPosition(600, 100)));
 
-    // Interval untuk mengacak posisi setiap 10 detik
     const intervalId = setInterval(() => {
       setPositions(
         Array.from({ length: 25 }, () => getRandomPosition(1200, 800))
       );
-    }, 10000); // 10000 ms = 10 detik
+    }, 10000);
 
-    // Membersihkan interval saat komponen di-unmount
     return () => clearInterval(intervalId);
   }, [hovered]);
 
@@ -40,34 +37,45 @@ function HeadSection() {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        {/* Animated Text for "OAT" */}
-        <motion.div
-          initial={{ x: -1000, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 3, delay: 2 }}
-        >
+        {!disableAnimation ? (
+          <>
+            <motion.div
+              initial={{ x: -1000, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 3, delay: 2 }}
+            >
+              <div className="inline-flex">
+                <span>O</span>
+                <span>A</span>
+                <span>T</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 1000, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 3, delay: 2 }}
+            >
+              <div className="inline-flex">
+                <span>S</span>
+                <span>I</span>
+                <span>D</span>
+                <span>E</span>
+              </div>
+            </motion.div>
+          </>
+        ) : (
           <div className="inline-flex">
             <span>O</span>
             <span>A</span>
             <span>T</span>
-          </div>
-        </motion.div>
-
-        {/* Animated Text for "SIDE" */}
-        <motion.div
-          initial={{ x: 1000, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 3, delay: 2 }}
-        >
-          <div className="inline-flex">
             <span>S</span>
             <span>I</span>
             <span>D</span>
             <span>E</span>
           </div>
-        </motion.div>
+        )}
 
-        {/* Animated Stickers */}
         {stickers.map((src, index) => (
           <motion.div
             key={index}
@@ -76,17 +84,17 @@ function HeadSection() {
               x: Math.random() * 1000 - 500,
               y: Math.random() * 500 - 250,
               opacity: 0,
-            }} // Posisi awal acak
+            }}
             animate={{
               x: hovered ? positions[index].x : Math.random() * 1000 - 500,
               y: hovered ? positions[index].y : Math.random() * 1000 - 250,
               opacity: 1,
-            }} // Posisi akhir atau acak
-            transition={{
-              duration: 1, // Durasi animasi
-              ease: "easeInOut", // Efek easing
             }}
-            style={{ zIndex: hovered ? -1 : 1 }} // Ubah z-index berdasarkan status hover
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            style={{ zIndex: hovered ? -1 : 1 }}
           >
             <img
               className="md:w-20  w-10 object-cover bg-cover transition-transform duration-500"
@@ -96,6 +104,7 @@ function HeadSection() {
           </motion.div>
         ))}
       </div>
+      <Outlet />
     </div>
   );
 }
