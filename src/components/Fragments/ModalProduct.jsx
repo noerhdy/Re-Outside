@@ -8,7 +8,16 @@ const ModalProduct = ({ isVisible, onClose, product }) => {
 
   useEffect(() => {
     setSelectedProduct(product);
-  }, [product]);
+    if (isVisible) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isVisible, product]);
 
   return (
     <AnimatePresence>
