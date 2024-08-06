@@ -49,10 +49,10 @@ const ModalInfo = ({ isVisible, onClose, info }) => {
           >
             <div className="flex justify-end py-3 mx-4 border-b-2 border-neutral-800/10">
               <button
-                className="text-[1rem] bg-neutral-900 px-4 py-1 rounded-xl font-normal focus:outline-none text-zinc-500"
+                className=" text-[1rem] bg-neutral-300 hover:bg-neutral-800  px-4 py-1 rounded-xl font-normal focus:outline-none text-zinc-500 hover:text-zinc-200 ease-in-out duration-200"
                 onClick={handleClose}
               >
-                Close
+                close
               </button>
             </div>
             <div className="flex flex-col items-center px-2 pb-12 h-full overflow-y-auto">

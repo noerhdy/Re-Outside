@@ -6,10 +6,10 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const images = [
-  { src: "carousel/4.jpg", alt: "Slide 1" },
-  { src: "carousel/2.jpg", alt: "Slide 2" },
-  { src: "carousel/1.jpg", alt: "Slide 3" },
-  { src: "carousel/3.jpg", alt: "Slide 4" },
+  { src: "carousel/4.webp", alt: "Slide 1" },
+  { src: "carousel/2.webp", alt: "Slide 2" },
+  { src: "carousel/1.webp", alt: "Slide 3" },
+  { src: "carousel/3.webp", alt: "Slide 4" },
 ];
 
 const GridSwipe = () => {
