@@ -14,24 +14,15 @@ function HeadSection({ disableAnimation }) {
   });
 
   useEffect(() => {
-    // Set initial positions with a delay of 5 seconds
-    const initialTimeoutId = setTimeout(() => {
-      setPositions(
-        Array.from({ length: 25 }, () => getRandomPosition(1200, 800))
-      );
-    }, 5000);
+    setPositions(Array.from({ length: 25 }, () => getRandomPosition(600, 100)));
 
-    // Change positions every 10 seconds after the initial update
     const intervalId = setInterval(() => {
       setPositions(
         Array.from({ length: 25 }, () => getRandomPosition(1200, 800))
       );
     }, 10000);
 
-    return () => {
-      clearTimeout(initialTimeoutId);
-      clearInterval(intervalId);
-    };
+    return () => clearInterval(intervalId);
   }, [hovered]);
 
   const stickers = Array.from(
