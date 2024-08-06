@@ -30,7 +30,7 @@ const GridSwipe = () => {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full overflow-hidden ">
+              <div className="relative w-full h-full overflow-hidden rounded-2xl ">
                 <img
                   className="w-full h-full aspect-square object-cover "
                   src={image.src}
