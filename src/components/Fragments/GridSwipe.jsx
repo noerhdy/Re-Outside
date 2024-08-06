@@ -26,11 +26,11 @@ const GridSwipe = () => {
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          className="w-full h-full relative "
+          className="w-full h-full relative rounded-2xl "
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full overflow-hidden rounded-2xl ">
+              <div className="relative w-full h-full overflow-hidden ">
                 <img
                   className="w-full h-full aspect-square object-cover "
                   src={image.src}
