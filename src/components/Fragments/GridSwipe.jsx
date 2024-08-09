@@ -44,7 +44,7 @@ const GridSwipe = () => {
           onClick={() => handleClick("https://www.instagram.com/Oatside")}
           className="absolute group bottom-0 w-full  z-[20] flex items-center  ease-in-out duration-500 justify-center sm:rounded-none rounded-xl"
         >
-          <div className="justify-center flex flex-col w-full py-4 items-center  group-hover:scale-125 group-hover:bg-blue-500 group-hover:text-[#fee6e5] ease-in-out duration-500 bg-neutral-800/70 text-white font-semibold text-[1rem] ">
+          <div className="justify-center flex flex-col w-full py-4 items-center  group-hover:scale-125 group-hover:bg-blue-500/80 group-hover:text-[#fee6e5] ease-in-out duration-500 bg-neutral-800/70 text-white font-semibold text-[1rem] ">
             <h1>Join Community</h1>
             <h1>@Oatside</h1>
           </div>
