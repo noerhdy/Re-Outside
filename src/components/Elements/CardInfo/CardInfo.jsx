@@ -5,7 +5,7 @@ function CardInfo({ textTitle, textTitle2, children, textStyle, textShort }) {
   const displayTitle = textTitle === "FAQ" ? textShort : textTitle;
   return (
     <div className="flex w-full  ">
-      <div className="flex  w-full  h-[80%]  ">
+      <div className="flex  w-full    ">
         <div className="flex flex-col mx-8 pt-4 h-auto">
           <h1 className="text-2xl text-center font-semibold">
             {displayTitle || textTitle2}

@@ -9,14 +9,12 @@ const ModalInfo = ({ isVisible, onClose, info }) => {
   useEffect(() => {
     setSelectedInfo(info);
 
-    // Menambahkan atau menghapus kelas "overflow-hidden" dari body
     if (isVisible) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
 
-    // Menghapus kelas saat komponen di-unmount
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
@@ -27,7 +25,7 @@ const ModalInfo = ({ isVisible, onClose, info }) => {
     setTimeout(() => {
       onClose();
       setIsExiting(false);
-    }, 500); // Durasi yang sesuai dengan animasi keluar
+    }, 500);
   };
 
   return (
@@ -41,21 +39,17 @@ const ModalInfo = ({ isVisible, onClose, info }) => {
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            className="relative bg-[#E9E6E1] rounded-2xl w-[90%] my-4 pb-2 sm:w-1/2 sm:h-fit h-[80%] overflow-hidden"
+            className="relative bg-[#E9E6E1] rounded-2xl w-[90%] sm:w-1/2 max-h-[90%] flex flex-col"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: isExiting ? 0 : 1, y: isExiting ? 100 : 0 }}
             exit={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex justify-end py-3 mx-4 border-b-2 border-neutral-800/10">
-              <button
-                className=" text-[1rem] bg-neutral-300 hover:bg-neutral-800  px-4 py-1 rounded-xl font-normal focus:outline-none text-zinc-500 hover:text-zinc-200 ease-in-out duration-200"
-                onClick={handleClose}
-              >
-                close
-              </button>
-            </div>
-            <div className="flex flex-col items-center px-2 pb-12 h-full overflow-y-auto">
+            {/* Header */}
+            <div className="flex justify-end py-3 px-4 "></div>
+
+            {/* Main Content */}
+            <div className="flex-grow overflow-y-auto px-4 py-2">
               <CardInfo
                 textTitle={selectedInfo.textTitle}
                 textShort={selectedInfo.textShort}
@@ -64,6 +58,16 @@ const ModalInfo = ({ isVisible, onClose, info }) => {
               >
                 {selectedInfo.content}
               </CardInfo>
+            </div>
+
+            {/* Footer */}
+            <div className="flex justify-end  rounded-b-xl mx-4 py-3 mt-2 px-1 border-t-2 border-neutral-800/10">
+              <button
+                className="text-[1rem] bg-neutral-300 hover:bg-neutral-400 px-4 py-1 rounded-xl font-normal focus:outline-none text-zinc-500 hover:text-zinc-300 ease-in-out duration-200"
+                onClick={handleClose}
+              >
+                close
+              </button>
             </div>
           </motion.div>
         </motion.div>

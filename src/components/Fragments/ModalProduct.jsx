@@ -62,12 +62,14 @@ const ModalProduct = ({ isVisible, onClose, product }) => {
                   </label>
                 ))}
               </div>
-              <button
-                className="text-3xl font-normal focus:outline-none text-zinc-500"
-                onClick={onClose}
-              >
-                &times; {/* Symbol for close (×) */}
-              </button>
+              <div className="flex justify-end py-3 mx-2 ">
+                <button
+                  className=" text-[1rem] bg-neutral-300 hover:bg-neutral-400  px-4 py-1 rounded-xl font-normal focus:outline-none text-zinc-500 hover:text-zinc-300 ease-in-out duration-200"
+                  onClick={onClose}
+                >
+                  close
+                </button>
+              </div>
             </div>
             <div className="flex flex-col items-center px-2">
               <CardProduct

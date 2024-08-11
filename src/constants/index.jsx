@@ -64,7 +64,7 @@ export const wordsLink = [
     content: (
       <>
         <div className="text-start py-4 w-full ">
-          <p className="font-normal text-[0.875rem] text-start text-zinc-700 leading-8">
+          <p className="font-normal text-[1rem] text-start text-zinc-700 leading-8">
             Look, it’s not you, it’s us. We had a great run, but now you’re
             kinda holding us back. It’s our fault, we loved you so much that we
             bred you in unsustainable numbers and we’ll admit it.
@@ -140,7 +140,7 @@ export const wordsLink = [
             want to be THE plant milk for people who don’t care for plant milks.
           </p>
         </div>
-        <div className="text-start py-2 w-full pb-12 border-b-2 border-zinc-700/20  ">
+        <div className="text-start py-2 w-full  border-b-2 border-zinc-700/20  ">
           <h1 className="font-semibold text-[1rem] text-start text-zinc-900 leading-8">
             Where is Oatside made?
           </h1>
