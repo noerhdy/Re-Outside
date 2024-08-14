@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import CardLoading from "../Elements/loading/CardLoading";
 
 const LoadingSection = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 5000); // Durasi 4 detik (2 detik animasi + 2 detik delay)
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
     <motion.section
       initial={{ y: 0, opacity: 1 }}
       animate={{
-        y: -1000,
+        y: -1200,
         transition: {
-          duration: 2,
+          duration: 3,
           delay: 2,
         },
       }}

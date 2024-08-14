@@ -12,7 +12,7 @@ function LandingPage() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth < 768);
+      setIsDesktop(window.innerWidth < 960);
     };
 
     window.addEventListener("resize", handleResize);
@@ -22,7 +22,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <section className="overflow-hidden sm:h-screen h-auto">
+    <section className="overflow-hidden sm:h-auto md:h-screen h-auto">
       <HeadSection />
       <motion.div
         className="z-10 relative"
@@ -43,8 +43,8 @@ function LandingPage() {
 
             {/* Grid (Kiri 1) Tagline*/}
             <div className="grid grid-cols-6 gap-4 sm:gap-2">
-              <div className="col-span-6 sm:col-span-3 sm:h-40 h-fit sm:bg-[#dad5ce] bg-[#292321] flex items-center justify-center rounded-2xl">
-                <div className="flex flex-col items-center py-2 w-full sm:text-[#4f443f] text-[#f7f6f5] tracking-wider">
+              <div className="col-span-6 sm:col-span-3 sm:h-40 h-fit  bg-[#292321] flex items-center justify-center rounded-2xl">
+                <div className="flex flex-col items-center py-2 w-full  text-[#f7f6f5] tracking-wider">
                   <h2 className="text-2xl sm:text-3xl font-bold">
                     Always look
                   </h2>
@@ -56,8 +56,8 @@ function LandingPage() {
               </div>
 
               {/* Grid (Kiri 2) - About*/}
-              <div className="col-span-3 sm:col-span-1 h-40 bg-[#c2baaf] p-4 rounded-2xl flex flex-col justify-center items-start">
-                <div className="flex flex-col items-start space-y-2 h-full w-full sm:text-[#4f443f] text-[#f7f6f5] tracking-wider">
+              <div className="col-span-3 sm:col-span-1 h-40 bg-[#c2baaf] p-4 rounded-2xl flex flex-col justify-center items-start overflow-hidden">
+                <div className="flex flex-col items-start space-y-2 h-full w-full text-[#4f443f] tracking-wider">
                   <h1 className="font-semibold text-[1rem] text-[#8b786b]">
                     Our Story
                   </h1>
